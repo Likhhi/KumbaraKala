@@ -108,6 +108,9 @@ fun ProductDetailsScreen(
     var artisanLocation by remember {
         mutableStateOf("")
     }
+    var artisanPhone by remember {
+        mutableStateOf("")
+    }
     var storyExists by remember {
         mutableStateOf(false)
     }
@@ -166,7 +169,9 @@ fun ProductDetailsScreen(
                 artisanLocation =
                     document.getString("location")
                         ?: ""
-
+                artisanPhone =
+                    document.getString("phone")
+                        ?: ""
                 artisanRole =
                     document.getString("artisanRole")
                         ?: ""
@@ -726,7 +731,18 @@ fun ProductDetailsScreen(
                                 Text(
                                     text = artisanLocation
                                 )
+                                Spacer(modifier = Modifier.height(6.dp))
+
+
                             }
+                            Spacer(modifier = Modifier.height(6.dp))
+
+                            Text(
+                                text = artisanPhone,
+                                fontSize = 18.sp,
+                                fontWeight = FontWeight.SemiBold,
+                                color = Color(0xFF5C4033)
+                            )
 
                             Spacer(
                                 modifier =

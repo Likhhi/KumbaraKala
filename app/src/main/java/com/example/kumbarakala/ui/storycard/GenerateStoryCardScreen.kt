@@ -56,6 +56,9 @@ fun GenerateStoryCardScreen(
     var artisanLocation by remember {
         mutableStateOf("")
     }
+    var artisanPhone by remember {
+        mutableStateOf("")
+    }
 
     var artisanQuote by remember {
         mutableStateOf("")
@@ -106,8 +109,9 @@ fun GenerateStoryCardScreen(
                                 userDoc.getString("location")
                                     ?: ""
 
-                            artisanQuote =
-                                userDoc.getString("quote")
+
+                            artisanPhone =
+                                userDoc.getString("phone")
                                     ?: ""
 
                             isLoading = false
@@ -299,6 +303,9 @@ fun GenerateStoryCardScreen(
                                 artisanName = artisanName,
 
                                 artisanLocation = artisanLocation,
+                                artisanPhone = artisanPhone,
+
+
 
                                 artisanQuote = artisanQuote,
 

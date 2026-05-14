@@ -17,6 +17,7 @@ data class StoryCard(
     val artisanName: String = "",
 
     val artisanLocation: String = "",
+    val artisanPhone: String = "",
 
     val artisanImageUrl: String = "",
 
